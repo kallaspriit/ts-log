@@ -1,4 +1,4 @@
-# TypeScript abstract logger
+# TypeScript Abstract Logger
 
 [![Travis](https://img.shields.io/travis/kallaspriit/ts-log.svg)](https://travis-ci.org/kallaspriit/ts-log)
 [![Coverage](https://img.shields.io/coveralls/kallaspriit/ts-log.svg)](https://coveralls.io/github/kallaspriit/ts-log)
