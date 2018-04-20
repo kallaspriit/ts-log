@@ -1,4 +1,4 @@
-# Blockchain.info receive payments API express middleware
+# TypeScript abstract logger
 
 [![Travis](https://img.shields.io/travis/kallaspriit/ts-log.svg)](https://travis-ci.org/kallaspriit/ts-log)
 [![Coverage](https://img.shields.io/coveralls/kallaspriit/ts-log.svg)](https://coveralls.io/github/kallaspriit/ts-log)
@@ -6,7 +6,7 @@
 [![Version](https://img.shields.io/npm/v/ts-log.svg)](http://npm.im/ts-log)
 [![License](https://img.shields.io/npm/l/ts-log.svg)](http://opensource.org/licenses/MIT)
 
-**Abstract logger TypeScript interface along with a dummy logger that does nothing, useful as default dummy logger for libraries.**
+**Abstract logger TypeScript interface along with a dummy logger that does nothing.**
 
 Useful for libraries wanting to provide a pluggable logger that does nothing by default.
 
