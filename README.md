@@ -26,8 +26,8 @@ npm install ts-log
 ## Example
 
 ```typescript
+import { dummyLogger, ILogger } from "ts-log";
 import * as fs from "fs";
-import { dummyLogger, ILogger } from "../src";
 
 // example custom logger that logs to a file
 class FileLogger implements ILogger {
