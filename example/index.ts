@@ -1,8 +1,8 @@
 import * as fs from "fs";
-import { dummyLogger, ILogger } from "../src";
+import { dummyLogger, Logger } from "../src";
 
 // example custom logger that logs to a file
-class FileLogger implements ILogger {
+class FileLogger implements Logger {
   private readonly fd: number;
 
   public constructor(filename: string) {
@@ -33,7 +33,7 @@ class FileLogger implements ILogger {
 // example class that uses the logger
 class Calculator {
   // accept the logger in the constructor, defaulting to dummy logger
-  public constructor(private readonly log: ILogger = dummyLogger) {}
+  public constructor(private readonly log: Logger = dummyLogger) {}
 
   public sum(a: number, b: number) {
     const result = a + b;

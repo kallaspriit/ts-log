@@ -1,8 +1,8 @@
-import { dummyLogger, ILogger } from "./index";
+import { dummyLogger, Logger } from "./index";
 
 class Calculator {
   // accept the logger in the constructor, defaulting to dummy logger
-  public constructor(private readonly log: ILogger = dummyLogger) {}
+  public constructor(private readonly log: Logger = dummyLogger) {}
 
   public sum(a: number, b: number) {
     const result = a + b;
@@ -32,7 +32,7 @@ describe("ts-log", () => {
   });
 
   it("should work with custom logger", async () => {
-    const customLogger: ILogger = {
+    const customLogger: Logger = {
       trace: jest.fn(),
       debug: jest.fn(),
       info: jest.fn(),

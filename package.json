@@ -53,5 +53,8 @@
       "js",
       "json"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.12.1"
   }
 }
