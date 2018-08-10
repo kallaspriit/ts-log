@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-config-strict", "tslint-config-prettier"],
+  "extends": ["typestrict"],
   "rules": {
     "no-any": false,
     "max-classes-per-file": false,
