@@ -5,14 +5,12 @@
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "author": "Stagnation Lab",
-  "keywords": [
-    "typescript",
-    "abstract",
-    "logger",
-    "console",
-    "dummy"
-  ],
+  "keywords": ["typescript", "abstract", "logger", "console", "dummy"],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kallaspriit/ts-log.git"
+  },
   "scripts": {
     "start": "nodemon --inspect example/index.ts",
     "build": "yarn tidy:build && tsc",
@@ -47,19 +45,10 @@
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "roots": [
-      "src"
-    ],
+    "roots": ["src"],
     "collectCoverage": false,
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
+    "collectCoverageFrom": ["src/**/*.ts"],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   }
 }
