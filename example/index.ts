@@ -1,6 +1,21 @@
 import * as fs from "fs";
 import { dummyLogger, Logger } from "../src";
 
+// example class that uses the logger
+class Calculator {
+  // accept the logger in the constructor, defaulting to dummy logger that does nothing
+  public constructor(private readonly log: Logger = dummyLogger) {}
+
+  public sum(a: number, b: number) {
+    const result = a + b;
+
+    // call the logger
+    this.log.info(`summing ${a} + ${b} = ${result}`, a, b, result);
+
+    return result;
+  }
+}
+
 // example custom logger that logs to a file
 class FileLogger implements Logger {
   private readonly fd: number;
@@ -30,25 +45,10 @@ class FileLogger implements Logger {
   }
 }
 
-// example class that uses the logger
-class Calculator {
-  // accept the logger in the constructor, defaulting to dummy logger
-  public constructor(private readonly log: Logger = dummyLogger) {}
-
-  public sum(a: number, b: number) {
-    const result = a + b;
-
-    // call the logger
-    this.log.info(`summing ${a} + ${b} = ${result}`, a, b, result);
-
-    return result;
-  }
-}
-
-// don't define the logger, defaults to dummy logger that does not do anything
+// don't define a logger, defaults to dummy logger that does nothing
 const calculator1 = new Calculator();
 
-// use the build-in console as the logger
+// use the built-in console as the logger
 const calculator2 = new Calculator(console);
 
 // use the custom file logger

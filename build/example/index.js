@@ -2,6 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var src_1 = require("../src");
+// example class that uses the logger
+var Calculator = /** @class */ (function () {
+    // accept the logger in the constructor, defaulting to dummy logger that does nothing
+    function Calculator(log) {
+        if (log === void 0) { log = src_1.dummyLogger; }
+        this.log = log;
+    }
+    Calculator.prototype.sum = function (a, b) {
+        var result = a + b;
+        // call the logger
+        this.log.info("summing " + a + " + " + b + " = " + result, a, b, result);
+        return result;
+    };
+    return Calculator;
+}());
 // example custom logger that logs to a file
 var FileLogger = /** @class */ (function () {
     function FileLogger(filename) {
@@ -47,24 +62,9 @@ var FileLogger = /** @class */ (function () {
     };
     return FileLogger;
 }());
-// example class that uses the logger
-var Calculator = /** @class */ (function () {
-    // accept the logger in the constructor, defaulting to dummy logger
-    function Calculator(log) {
-        if (log === void 0) { log = src_1.dummyLogger; }
-        this.log = log;
-    }
-    Calculator.prototype.sum = function (a, b) {
-        var result = a + b;
-        // call the logger
-        this.log.info("summing " + a + " + " + b + " = " + result, a, b, result);
-        return result;
-    };
-    return Calculator;
-}());
-// don't define the logger, defaults to dummy logger that does not do anything
+// don't define a logger, defaults to dummy logger that does nothing
 var calculator1 = new Calculator();
-// use the build-in console as the logger
+// use the built-in console as the logger
 var calculator2 = new Calculator(console);
 // use the custom file logger
 var calculator3 = new Calculator(new FileLogger("log.txt"));

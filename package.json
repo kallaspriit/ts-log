@@ -1,17 +1,11 @@
 {
   "name": "ts-log",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Abstract logger TypeScript interface with a dummy logger that does nothing, useful for libraries.",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "author": "Stagnation Lab",
-  "keywords": [
-    "typescript",
-    "abstract",
-    "logger",
-    "console",
-    "dummy"
-  ],
+  "keywords": ["typescript", "abstract", "logger", "console", "dummy"],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -30,40 +24,31 @@
     "test": "jest",
     "test-watch": "jest --watch --collectCoverage",
     "coverage": "yarn tidy:coverage && jest --collectCoverage",
-    "audit": "yarn prettier && yarn build && yarn lint && yarn coverage",
+    "validate": "yarn prettier && yarn build && yarn lint && yarn coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^22.2.2",
-    "@types/node": "^9.6.1",
-    "coveralls": "^3.0.0",
-    "jest": "^22.4.3",
-    "nodemon": "^1.17.3",
-    "prettier": "^1.12.1",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.9",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.6",
+    "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.2",
+    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
-    "typescript": "^2.8.1",
-    "typestrict": "^0.0.9"
+    "typescript": "^3.1.6",
+    "typestrict": "^1.0.1"
   },
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "roots": [
-      "src"
-    ],
+    "roots": ["src"],
     "collectCoverage": false,
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
+    "collectCoverageFrom": ["src/**/*.ts"],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   }
 }

@@ -16,19 +16,9 @@ export interface Logger {
  * Useful as a default for some library that the user might want to get logs out of.
  */
 export const dummyLogger: Logger = {
-  trace: (_message?: any, ..._optionalParams: any[]) => {
-    /* dummy */
-  },
-  debug: (_message?: any, ..._optionalParams: any[]) => {
-    /* dummy */
-  },
-  info: (_message?: any, ..._optionalParams: any[]) => {
-    /* dummy */
-  },
-  warn: (_message?: any, ..._optionalParams: any[]) => {
-    /* dummy */
-  },
-  error: (_message?: any, ..._optionalParams: any[]) => {
-    /* dummy */
-  },
+  trace: (_message?: any, ..._optionalParams: any[]) => {},
+  debug: (_message?: any, ..._optionalParams: any[]) => {},
+  info: (_message?: any, ..._optionalParams: any[]) => {},
+  warn: (_message?: any, ..._optionalParams: any[]) => {},
+  error: (_message?: any, ..._optionalParams: any[]) => {},
 };

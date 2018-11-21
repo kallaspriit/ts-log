@@ -8,12 +8,13 @@
 
 **Abstract logger TypeScript interface along with a dummy logger that does nothing.**
 
-Useful for libraries wanting to provide a pluggable logger that does nothing by default.
+Useful for libraries wanting to provide a pluggable logger that does nothing by default (or provide your own default such as [bunyan](https://github.com/trentm/node-bunyan)).
 
-- Matches the build-in console that can be directly plugged in.
+- Matches the built-in console that can be used directly.
 - Also matches [bunyan](https://github.com/trentm/node-bunyan).
 - Provides usage and custom logger example.
 - Written in TypeScript, no need for extra typings.
+- No dependencies, 24 LOC with comments, 100% test coverage.
 
 ## Installation
 
@@ -22,15 +23,33 @@ This package is distributed via npm
 ```cmd
 npm install ts-log
 ```
+```cmd
+yarn add ts-log
+```
 
 ## Example
 
 ```typescript
-import { dummyLogger, ILogger } from "ts-log";
+import { dummyLogger, Logger } from "ts-log";
 import * as fs from "fs";
 
+// example class that uses the logger
+class Calculator {
+  // accept the logger in the constructor, defaulting to dummy logger that does nothing
+  public constructor(private readonly log: Logger = dummyLogger) {}
+
+  public sum(a: number, b: number) {
+    const result = a + b;
+
+    // call the logger
+    this.log.info(`summing ${a} + ${b} = ${result}`, a, b, result);
+
+    return result;
+  }
+}
+
 // example custom logger that logs to a file
-class FileLogger implements ILogger {
+class FileLogger implements Logger {
   private readonly fd: number;
 
   public constructor(filename: string) {
@@ -62,25 +81,10 @@ class FileLogger implements ILogger {
   }
 }
 
-// example class that uses the logger
-class Calculator {
-  // accept the logger in the constructor, defaulting to dummy logger
-  public constructor(private readonly log: ILogger = dummyLogger) {}
-
-  public sum(a: number, b: number) {
-    const result = a + b;
-
-    // call the logger
-    this.log.info(`summing ${a} + ${b} = ${result}`, a, b, result);
-
-    return result;
-  }
-}
-
-// don't define the logger, defaults to dummy logger that does not do anything
+// don't define a logger, defaults to dummy logger that does nothing
 const calculator1 = new Calculator();
 
-// use the build-in console as the logger
+// use the built-in console as the logger
 const calculator2 = new Calculator(console);
 
 // use the custom file logger
@@ -100,4 +104,4 @@ calculator3.sum(6, 3);
 - `yarn coverage` to gather code coverage.
 - `yarn lint` to lint the codebase.
 - `yarn prettier` to run prettier.
-- `yarn audit` to run all pre-commit checks (prettier, build, lint, test)
+- `yarn validate` to run all pre-commit checks (prettier, build, lint, test)
