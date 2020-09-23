@@ -98,10 +98,10 @@ calculator3.sum(6, 3);
 
 ## Commands
 
-- `yarn start` to start the example application.
-- `yarn build` to build the production version.
-- `yarn test` to run tests.
-- `yarn coverage` to gather code coverage.
-- `yarn lint` to lint the codebase.
-- `yarn prettier` to run prettier.
-- `yarn validate` to run all pre-commit checks (prettier, build, lint, test)
+- `npm start` to start the example application.
+- `npm run build` to build the production version.
+- `npm run test` to run tests.
+- `npm run coverage` to gather code coverage.
+- `npm run lint` to lint the codebase.
+- `npm run prettier` to run prettier.
+- `npm run validate` to run all pre-commit checks (prettier, build, lint, test)

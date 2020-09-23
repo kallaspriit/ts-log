@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.dummyLogger = void 0;
 /**
  * Dummy logger that does not do anything.
  *
