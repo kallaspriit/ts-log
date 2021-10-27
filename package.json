@@ -1,6 +1,6 @@
 {
   "name": "ts-log",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Abstract logger TypeScript interface with a dummy logger that does nothing, useful for libraries.",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -35,16 +35,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^27.0.2",
     "@types/node": "^14.11.2",
-    "coveralls": "^3.1.0",
-    "jest": "^26.4.2",
-    "nodemon": "^2.0.4",
-    "prettier": "^2.1.2",
+    "coveralls": "^3.1.1",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.4.0",
+    "ts-jest": "^27.0.7",
     "tslint": "^5.20.1",
-    "typescript": "^4.0.3",
+    "typescript": "^4.4.4",
     "typestrict": "^1.0.2"
   },
   "jest": {
