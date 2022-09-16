@@ -12,7 +12,7 @@ var Calculator = /** @class */ (function () {
     Calculator.prototype.sum = function (a, b) {
         var result = a + b;
         // call the logger
-        this.log.info("summing " + a + " + " + b + " = " + result, a, b, result);
+        this.log.info("summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
         return result;
     };
     return Calculator;
@@ -27,38 +27,38 @@ var FileLogger = /** @class */ (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        this.append("TRACE", message + " " + JSON.stringify(optionalParams));
+        this.append("TRACE", "".concat(message, " ").concat(JSON.stringify(optionalParams)));
     };
     FileLogger.prototype.debug = function (message) {
         var optionalParams = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        this.append("DEBUG", message + " " + JSON.stringify(optionalParams));
+        this.append("DEBUG", "".concat(message, " ").concat(JSON.stringify(optionalParams)));
     };
     FileLogger.prototype.info = function (message) {
         var optionalParams = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        this.append("INFO ", message + " " + JSON.stringify(optionalParams));
+        this.append("INFO ", "".concat(message, " ").concat(JSON.stringify(optionalParams)));
     };
     FileLogger.prototype.warn = function (message) {
         var optionalParams = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        this.append("WARN ", message + " " + JSON.stringify(optionalParams));
+        this.append("WARN ", "".concat(message, " ").concat(JSON.stringify(optionalParams)));
     };
     FileLogger.prototype.error = function (message) {
         var optionalParams = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        this.append("ERROR", message + " " + JSON.stringify(optionalParams));
+        this.append("ERROR", "".concat(message, " ").concat(JSON.stringify(optionalParams)));
     };
     FileLogger.prototype.append = function (type, message) {
-        fs.writeSync(this.fd, new Date().toISOString() + " " + type + " " + message + "\n");
+        fs.writeSync(this.fd, "".concat(new Date().toISOString(), " ").concat(type, " ").concat(message, "\n"));
     };
     return FileLogger;
 }());

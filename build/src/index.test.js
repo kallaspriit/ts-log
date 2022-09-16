@@ -46,11 +46,11 @@ var Calculator = /** @class */ (function () {
     Calculator.prototype.sum = function (a, b) {
         var result = a + b;
         // call all methods of the logger
-        this.log.trace("trace summing " + a + " + " + b + " = " + result, a, b, result);
-        this.log.debug("debug summing " + a + " + " + b + " = " + result, a, b, result);
-        this.log.info("info summing " + a + " + " + b + " = " + result, a, b, result);
-        this.log.warn("warn summing " + a + " + " + b + " = " + result, a, b, result);
-        this.log.error("error summing " + a + " + " + b + " = " + result, a, b, result);
+        this.log.trace("trace summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
+        this.log.debug("debug summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
+        this.log.info("info summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
+        this.log.warn("warn summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
+        this.log.error("error summing ".concat(a, " + ").concat(b, " = ").concat(result), a, b, result);
         return result;
     };
     return Calculator;
