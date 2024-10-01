@@ -1,6 +1,5 @@
 # TypeScript Abstract Logger
 
-[![Travis](https://img.shields.io/travis/kallaspriit/ts-log.svg)](https://travis-ci.org/kallaspriit/ts-log)
 [![Coverage](https://img.shields.io/coveralls/kallaspriit/ts-log.svg)](https://coveralls.io/github/kallaspriit/ts-log)
 [![Downloads](https://img.shields.io/npm/dm/ts-log.svg)](http://npm-stat.com/charts.html?package=ts-log)
 [![Version](https://img.shields.io/npm/v/ts-log.svg)](http://npm.im/ts-log)
