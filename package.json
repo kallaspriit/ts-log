@@ -42,10 +42,11 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
-    "format": "prettier --write src/",
+    "format": "prettier --check src/",
+    "format:fix": "prettier --write src/",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "validate": "npm run format && npm run build && npm run typecheck && npm run lint && npm run test:coverage",
+    "validate": "npm run format && npm run build && npm run typecheck && npm run lint && npm run format && npm run test:coverage",
     "prepublishOnly": "tsup"
   },
   "devDependencies": {
