@@ -94,7 +94,7 @@ v3 is a tooling modernization — the `Logger` interface and `dummyLogger` API a
 
 - Dual CJS/ESM package (via `exports` field).
 - `"type": "module"` added to package.json.
-- Minimum Node.js version is 18.
+- Minimum Node.js version is 20.
 - Build output moved from `build/src/` to `dist/`.
 
 ## License

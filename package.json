@@ -35,7 +35,7 @@
     "url": "git+https://github.com/kallaspriit/ts-log.git"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "build": "tsup",
