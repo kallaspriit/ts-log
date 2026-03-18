@@ -1,23 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2015", "dom"],
-    "rootDirs": ["src", "example"],
-    "outDir": "build",
-    "moduleResolution": "node",
-
-    "declaration": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
     "strict": true,
+    "declaration": true,
     "sourceMap": true,
-    "pretty": true,
+    "noEmit": true,
     "forceConsistentCasingInFileNames": true,
-
-    "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
-  }
+    "skipLibCheck": true
+  },
+  "include": ["src"]
 }
