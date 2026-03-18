@@ -49,15 +49,15 @@
     "prepublishOnly": "tsup"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^22.7.4",
-    "@vitest/coverage-v8": "^3.0.0",
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^10.0.0",
-    "prettier": "^3.3.3",
-    "tsup": "^8.0.0",
-    "typescript": "^5.8.0",
-    "typescript-eslint": "^8.0.0",
-    "vitest": "^3.0.0"
+    "@vitest/coverage-v8": "^4.1.0",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "vitest": "^4.1.0"
   }
 }
