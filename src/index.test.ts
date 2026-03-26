@@ -75,7 +75,11 @@ describe("ts-log", () => {
   });
 
   it("console should satisfy the Logger interface", () => {
+    // compile-time structural type check — if console doesn't satisfy Logger, tsc will fail
     const logger: Logger = console;
-    expect(logger).toBeDefined();
+    const spy = vi.spyOn(logger, "info").mockImplementation(() => {});
+    logger.info("type-check");
+    expect(spy).toHaveBeenCalledWith("type-check");
+    spy.mockRestore();
   });
 });
