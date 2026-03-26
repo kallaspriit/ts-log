@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/npm/dm/ts-log.svg)](http://npm-stat.com/charts.html?package=ts-log)
 [![Version](https://img.shields.io/npm/v/ts-log.svg)](http://npm.im/ts-log)
 [![License](https://img.shields.io/npm/l/ts-log.svg)](http://opensource.org/licenses/MIT)
-[![StackGrit Score](https://img.shields.io/endpoint?url=https%3A%2F%2Ffleet-trout-946.convex.site%2Fapi%2Fbadge%2Fab080bce-08cf-4c0a-9ffa-c165470ad08d)](https://app.stackgrit.com/shared/b16e2501260e476597552a610a0b5542)
+[![StackGrit Score](https://img.shields.io/endpoint?url=https%3A%2F%2Ffleet-trout-946.convex.site%2Fapi%2Fbadge%2Fab080bce-08cf-4c0a-9ffa-c165470ad08d)](https://app.stackgrit.com/shared/b16e2501260e476597552a610a0b5542/reports/latest)
 
 A zero-dependency TypeScript logger interface. Let library consumers choose their own logger — or stay silent by default.
 
