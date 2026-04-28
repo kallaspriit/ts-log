@@ -1,6 +1,6 @@
 {
   "name": "ts-log",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Abstract logger TypeScript interface with a dummy logger that does nothing, useful for libraries.",
   "type": "module",
   "main": "./dist/index.cjs",
