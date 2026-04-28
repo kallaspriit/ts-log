@@ -39,20 +39,26 @@ describe("ts-log", () => {
   });
 
   it("should work with console as logger", () => {
-    const spies = [
-      vi.spyOn(console, "trace").mockImplementation(() => {}),
-      vi.spyOn(console, "debug").mockImplementation(() => {}),
-      vi.spyOn(console, "info").mockImplementation(() => {}),
-      vi.spyOn(console, "warn").mockImplementation(() => {}),
-      vi.spyOn(console, "error").mockImplementation(() => {}),
-    ];
+    const traceSpy = vi.spyOn(console, "trace").mockImplementation(() => {});
+    const debugSpy = vi.spyOn(console, "debug").mockImplementation(() => {});
+    const infoSpy = vi.spyOn(console, "info").mockImplementation(() => {});
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
     const calculator = new Calculator(console);
     expect(calculator.sum(1, 2)).toBe(3);
-    spies.forEach((spy) => {
-      expect(spy).toHaveBeenCalled();
-      spy.mockRestore();
-    });
+
+    expect(traceSpy).toHaveBeenCalledWith("trace summing 1 + 2 = 3", 1, 2, 3);
+    expect(debugSpy).toHaveBeenCalledWith("debug summing 1 + 2 = 3", 1, 2, 3);
+    expect(infoSpy).toHaveBeenCalledWith("info summing 1 + 2 = 3", 1, 2, 3);
+    expect(warnSpy).toHaveBeenCalledWith("warn summing 1 + 2 = 3", 1, 2, 3);
+    expect(errorSpy).toHaveBeenCalledWith("error summing 1 + 2 = 3", 1, 2, 3);
+
+    traceSpy.mockRestore();
+    debugSpy.mockRestore();
+    infoSpy.mockRestore();
+    warnSpy.mockRestore();
+    errorSpy.mockRestore();
   });
 
   it("should work with a custom logger and call all methods", () => {
