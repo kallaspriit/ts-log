@@ -1,6 +1,6 @@
 {
   "name": "ts-log",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Abstract logger TypeScript interface with a dummy logger that does nothing, useful for libraries.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -52,14 +52,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.6.0",
-    "@vitest/coverage-v8": "^4.1.5",
-    "eslint": "^10.2.1",
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^10.8.1",
     "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.8.3",
+    "prettier": "^3.9.6",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.1",
-    "vitest": "^4.1.5"
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.10"
   }
 }
